@@ -214,12 +214,11 @@ L(y^, y) = -(y * log y^) + (1-y) * log(1-y^)
     - 비용함수가 볼록하다는 사실이 로지스틱 회귀에 위의 비용함수 J를 사용한 가장 큰 이유!
     - 함수의 최소값을 모르기 때문에, 임의의 점을 골라서 시작 → 매개변수에 쓸 좋은 값을 찾기 위해 w,b를 초기화해야함
         - 주로 0으로 설정. 무작위는 잘 안 함.
-            
-            <img width="500"" alt="스크린샷_2021-10-03_오후_6 03 05" src="https://user-images.githubusercontent.com/66219968/135751760-b271d935-43aa-4faa-a9dd-425a7eec5b8e.png">
-            
+            <img width="500" alt="스크린샷_2021-10-03_오후_6 03 05" src="https://user-images.githubusercontent.com/66219968/135751760-b271d935-43aa-4faa-a9dd-425a7eec5b8e.png">
+        
     - 경사 하강법에서는 초기점에서 시작해 가장 가파른 내리막 방향으로 한 단계 내려감 → 전역 최적값이나 근사치에 도달하게 됨.
 
-<img width="500"alt="스크린샷_2021-10-03_오후_6 12 53" src="https://user-images.githubusercontent.com/66219968/135751762-a9f8dd4c-512e-4285-998b-3223932893dd.png">
+<img width="500" alt="스크린샷_2021-10-03_오후_6 12 53" src="https://user-images.githubusercontent.com/66219968/135751762-a9f8dd4c-512e-4285-998b-3223932893dd.png">
 
 <img width="500" alt="스크린샷_2021-10-03_오후_6 23 45" src="https://user-images.githubusercontent.com/66219968/135751764-61689761-6b6f-460f-9061-5f857a6784f8.png">
 
