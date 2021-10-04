@@ -36,7 +36,7 @@
 작성 순서는 이름의 가나다 순서로 배치했습니다.  
 **금나연 -  박세은 - 양현서 -  윤소영 -  장수민 -  조유림**
 </br>
-### 기술 블로그
+### ✏기술 블로그
 [GDSC Sookmyung 기술 블로그](https://dsc-sookmyung.tistory.com/)
 ### ✏노션 링크
 [Machine Learning (GAN) 스터디](https://pleasant-skull-fd4.notion.site/1-Machine-Learning-ee906750a0d441f69463864563cd3a2a)
