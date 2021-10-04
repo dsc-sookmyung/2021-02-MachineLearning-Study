@@ -3,7 +3,7 @@
 </br>
 
 ### 💡스터디 Lead💡
-담당 : [강예원](https://github.com/dolylupec)
+담당 : [강예원](https://github.com/dolylupec)  
 부담당 : [남수연](https://github.com/mori8)
 ### ✨스터디 Member✨
 [금나연](https://github.com/NayeonKeum) 박세은 양현서 [윤소영](https://github.com/ddo0) [장수민](https://github.com/4oomin) [조유림](https://github.com/ofzlo)  
