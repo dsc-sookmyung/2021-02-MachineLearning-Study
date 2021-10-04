@@ -6,7 +6,7 @@
 [강예원](https://github.com/dolylupec)  
 
 ### ✨스터디 Member✨
-[금나연](https://github.com/NayeonKeum) 박세은 양현서 [윤소영](https://github.com/ddo0) [장수민](https://github.com/4oomin) [조유림](https://github.com/ofzlo)  
+[금나연](https://github.com/NayeonKeum) 박세은 [양현서](https://github.com/seoshabber) [윤소영](https://github.com/ddo0) [장수민](https://github.com/4oomin) [조유림](https://github.com/ofzlo)  
 </br>
 
 
