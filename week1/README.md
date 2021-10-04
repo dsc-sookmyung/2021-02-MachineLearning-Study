@@ -1,7 +1,7 @@
-## Deep Learning Basics
-from [Lecture](https://www.edwith.org/ai215/joinLectures/86246?isDesc=false "Andrew Ng Deep Learning Basics")
+# Deep Learning Basics
+#### from [Lecture](https://www.edwith.org/ai215/joinLectures/86246?isDesc=false "Andrew Ng Deep Learning Basics")
 
-# 1. Introduction to Deep Learning    
+## 1. Introduction to Deep Learning    
 ***
 #### AI=Electricity       
 * effecting almost every industry    
@@ -51,7 +51,7 @@ from [Lecture](https://www.edwith.org/ai215/joinLectures/86246?isDesc=false "And
 ***
 
 
-# 2. Basics of Neural Network Programming    
+## 2. Basics of Neural Network Programming    
 ***
 #### Binary Classification      
 * Image
@@ -82,7 +82,7 @@ from [Lecture](https://www.edwith.org/ai215/joinLectures/86246?isDesc=false "And
 ***
 
 
-# 3. 
+## 3. 
 ***
 #### What is vectorization
 * z=w^(t)*x + b
@@ -171,7 +171,7 @@ print(percentage)
 
 ***
 
-# 4. NNs
+## 4. NNs
 ***
 #### NNs Representation
 * 2 Layer NN(doesn't count the input layer)
@@ -268,7 +268,7 @@ b_i = np.zero((2, 1))
 
 ***
 
-# 5. Deep NN
+## 5. Deep NN
 ***
 
 #### Deep L-Layer Neural Network
