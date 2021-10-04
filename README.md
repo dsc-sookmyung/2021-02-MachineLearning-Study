@@ -38,5 +38,5 @@
 </br>
 ### ✏기술 블로그
 [GDSC Sookmyung 기술 블로그](https://dsc-sookmyung.tistory.com/)
-### ✏노션 링크
+### ✏Notion
 [Machine Learning (GAN) 스터디](https://pleasant-skull-fd4.notion.site/1-Machine-Learning-ee906750a0d441f69463864563cd3a2a)
