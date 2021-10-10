@@ -1,11 +1,12 @@
 # 2. Regularizing your neural network
 
-### **Recularization**
+Recularization
+---
 
 - 정규화: 높은 분산으로 신경망이 데이터를 과대적합하는 문제 의심될 경우 첫번재로 사용
 - **Logistic Regression**
     
-    ![Untitled](2%20Regularizing%20your%20neural%20network%20903aee334c11432a9c20aa94d8ee4fda/Untitled.png)
+    ![Untitled](https://user-images.githubusercontent.com/90624848/136708494-7ed6d6a6-1f5e-4246-9ec1-a1b7f4c38e79.png)
     
     - $\lambda$: 정규화 매개변수(regularization parameter)
         - 설정이 필요한 또 다른 하이퍼파라미터 ⇒ 파이썬의 명령어이기도 함
@@ -23,24 +24,25 @@
         - **네트워크 훈련시 L2정규화 사용**
 - **Neural Network**
     
-    ![Untitled](2%20Regularizing%20your%20neural%20network%20903aee334c11432a9c20aa94d8ee4fda/Untitled%201.png)
+    ![Untitled](https://user-images.githubusercontent.com/90624848/136708499-54b03ae3-5162-40e3-ad18-650ada503e78.png)
     
     - Frobenius norm : 행렬의 원소 제곱의 합
         
-        ![Untitled](2%20Regularizing%20your%20neural%20network%20903aee334c11432a9c20aa94d8ee4fda/Untitled%202.png)
+        ![Untitled](https://user-images.githubusercontent.com/90624848/136708502-29aa9ba0-56e7-4ab8-ad7b-5ee805006e15.png)
         
         - 행렬의 L2 norm
     - L2 정규화 = weight decay라고 불림
         
-        ![Untitled](2%20Regularizing%20your%20neural%20network%20903aee334c11432a9c20aa94d8ee4fda/Untitled%203.png)
+        ![Untitled](https://user-images.githubusercontent.com/90624848/136708513-c89b3972-18fd-4581-8c4e-996a9572eeef.png)
         
         - weight에 1보다 작은 값이 곱해지기 때문
 
-### **Why Regulariztion Reduces overfitting**
+Why Regulariztion Reduces overfitting
+---
 
 - $\lambda$값을 크게 만들어서 가중치행렬 $w$를 0에 가깝게 설정할 수 있음.
     
-    ![Untitled](2%20Regularizing%20your%20neural%20network%20903aee334c11432a9c20aa94d8ee4fda/Untitled%204.png)
+    ![Untitled](https://user-images.githubusercontent.com/90624848/136708516-b4744dae-a86f-4dc9-8c65-4ef4d2cd4f3a.png)
     
     - 많은 은닉 유닛을 0에 가까운 값으로 설정해서 은닉 유닛의 영향력을 줄임
         
@@ -52,9 +54,9 @@
     
     ⇒ 이 때, 아래 식에 의해 z도 작아지게 됨.
     
-    ![Untitled](2%20Regularizing%20your%20neural%20network%20903aee334c11432a9c20aa94d8ee4fda/Untitled%205.png)
+    ![Untitled](https://user-images.githubusercontent.com/90624848/136708520-5a20e278-2d36-426d-a698-c4006f0a6f7e.png)
     
-    ![Untitled](2%20Regularizing%20your%20neural%20network%20903aee334c11432a9c20aa94d8ee4fda/Untitled%206.png)
+    ![Untitled](https://user-images.githubusercontent.com/90624848/136708521-8092b5a8-39c5-4375-843a-a52c548b0a8e.png)
     
     - $g(z) = tanh(z)$
     - z가 작을 때 g(z)는 선형 함수가 되고, 전체 네트워크도 선형이 되기에 과대적합과 같이 복잡한 결정을 내릴 수 없음.
@@ -65,7 +67,8 @@
     - 비용함수 J가 경사 하강법의 반복마다 단조감소하기를 원할 것
     - 경사 하강법을 디버깅 할 때는 두번째 항을 포함한(정규화를 적용한) 새로운 비용함수 J를 쓰는것이 좋음
 
-### **Dropout regularization**
+Dropout regularization
+---
 
 - Dropout
     - L2 Regularization 외의 또 다른 정규화기법
@@ -77,7 +80,7 @@
 - Dropout 구현 방법
     - Inverted Dropout(역 드롭아웃)
         
-        ![Untitled](2%20Regularizing%20your%20neural%20network%20903aee334c11432a9c20aa94d8ee4fda/Untitled%207.png)
+        ![Untitled](https://user-images.githubusercontent.com/90624848/136708525-6bd14e09-b793-42d3-8662-9ff1b6efaf7c.png)
         
         - keep_prob : 어떤 은닉 유닛이 유지될 확률
         - keep_prob을 나누는 이유: a3의 기댓값을 유지하기 위해
@@ -85,13 +88,14 @@
         - 반복을 통해 경사 하강법의 하나의 반복마다 0이 되는 은닉 유닛들이 달라짐
 - Making Predictions at test time
     
-    ![Untitled](2%20Regularizing%20your%20neural%20network%20903aee334c11432a9c20aa94d8ee4fda/Untitled%208.png)
+    ![Untitled](https://user-images.githubusercontent.com/90624848/136708590-e97b2d5b-004d-4462-8899-79628cda1c61.png)
     
     - X : test의 샘플
     - 테스트에서는 '예측'을 하는 것이므로, 결과가 무작위로 나오는 것을 원하지 않음
     - 테스트에 드롭아웃을 구현하는것 ⇒ 노이즈만 증가시킬뿐 비효율적임
 
-### **Understanding Dropout**
+Understanding Dropout
+---
 
 - Dropout : 노드를 삭제함으로써 더 작은 신경망에서 훈련시키는 것이므로 정규화의 효과를 주는 것처럼 보임
 - 단일 유닛의 관점
@@ -116,7 +120,8 @@
     - 우선 드롭아웃을 사용하지 않고, 비용함수가 단조감소인지 확인 후 사용해야함.
     - 드롭아웃을 사용할때 코드를 바꾸지 않도록 해야함.
 
-### **Other Regularization Methods**
+Other Regularization Methods
+---
 
 - **Data augmentation**
     - 보통 이미지를 대칭, 확대, 왜곡 혹은 회전을 시켜서 새로운 훈련 데이터를 만든다.
@@ -125,7 +130,7 @@
     - 훈련 오차나 비용함수 J는 단조 감소하는 형태로 그려져야 함.
     - Early Stopping : 개발 세트 오차도 함께 그려줌
         
-        ![Untitled](2%20Regularizing%20your%20neural%20network%20903aee334c11432a9c20aa94d8ee4fda/Untitled%209.png)
+        ![Untitled](https://user-images.githubusercontent.com/90624848/136708592-a162cc68-4946-43ee-9acc-6a46aa638982.png)
         
         - dev set error가  중간에 하락하지 않고 증가하기 시작
             - 과대적화가 시작되는 시점
