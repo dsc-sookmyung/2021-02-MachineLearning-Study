@@ -49,9 +49,9 @@
 | 3주차 | 양현서 | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
 | 4주차 | 윤소영 | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
 | 5주차 | 장수민 | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
-| 6주차 | 조유림 | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| 6주차 | 조유림 | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
 | 7주차 | 금나연 | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
-| 8주차 | 박세은 | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| 8주차 | 양현서 | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
 <br/>
 </br>
 
