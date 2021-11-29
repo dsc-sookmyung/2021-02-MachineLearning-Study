@@ -22,3 +22,54 @@ X -> G(생성기) -> 이미지 결과   -> D(판별기) -> 참인지 거짓인�
 G가 가장 잘 훈련된 D를 속이는 네트워크가 되어야 한다
 
 ## Cycle GAN
+
+pix2pix의 손실함수와 GAN의 손실함수를 합친 Cycle GAN의  
+<strong>손실함수 : </strong>S(x,y) ||y - G(x)||1 + LGAN(G(X),y)
+문제점
+1. input 이미지 무시
+2. input과 상관없이 같은 이미지 output
+=> <strong>해결방법 : </strong>output그림을 통해 input이미지를 만들어내도록 하라  
+  
+<strong>그림</strong> -> G(생성기) -> 사진 -> F(판별기) -> <strong>그림</strong>  
+첫 부분의 그림과 마지막의 그림은 같은 그림이 나와야 한다  
+=>G와 F는 서로 역방향  
+
+따라서 진짜 <strong>Cycle GAN의 손실함수 : </strong>LGAN(G(X),y) + ||F(G(X))-x||1 + LGAN(F(y),y) + ||G(F(y))-y||1
+
+<storng>Cycle GAN에서 중요한 부분</strong>
+<ol>
+  <li>Generate 아키텍처
+    <ul>
+      <li>encoder decoder => 이미지 축약 -> 확장 : 급진적인 이미지 변화 가능 ex)SKT의 디스코 겐</li>
+      <li>UNet => 이미지 축약 -> 확장 + skip connection : 기존의 디테일을 살릴 수 있다 but 두 데이터 셋이 상당히 비슷한 경우에 많이 사용, 깊이가 부족해진다</li>
+      <li>ResNet => 여러 층을 이용해 이미지를 축약하지 않고(병목 x) 깊은 네트워크를 만들어 높은 퀄리티의 이미지 생산 가능 but 메모리 사용량이 많고, 사용 가능한 파라미터가 적다, 형태 변환을 많이 할 수 없다</li>
+    </ul>
+  </li>
+  <li> Loss 함수
+    <ul> 
+      <li>기존 GAN의 손실함수 : LGAN(G, DY, X, Y) = Ey~pdata(y)[log DY(y)] + Ex~pdata(x)[log(1-DY(G(X))]  x>0인 범위에서 경사가 매우 완만해진다는 문제점 존재(훈련이 어렵다)</li>
+      <li>Least Square GAN 의 손실함수 : LLSGAN(G, DY, X, Y) = Ey~pdata(y)[(DY(y)-1)^2] + Ex~pdata(x)[(DY(G(x))^2]  
+        안정적인 훈련이 가능하고 더 나은 결과를 얻을 수 있다.  
+        모드붕괴, 노이즈가 없다</li>
+    </ul>
+  </li>
+  <li>L1 loss  
+    : 생성된 이미지와 원래 이미지의 차이
+    GAN은 두 네트워크가 경쟁하면서 학습하기 때문에 트레이닝이 망가지는 경우가 많다 -> L1이 가이드 라인이 되어준다
+    이를 위해 가짜 L1을 생성 -> 안정적인 훈련이 가능하게 해준다
+    ex) L1 : 얼룩말 -> 말 결과를 토대로 가짜 말-> 얼룩말 (=> 어떤 정답으로 되돌아가야 하는 지 안다)
+    얼룩말 -> 얼룩말 (=> input으로 얼룩말이 들어오면 바뀌지 않고 그대로 output되어야 한다)</li>
+  </ol>
+  
+  
+GAN -> 랜덤시드에 따라 결과가 불안정한 문제 존재
+해결방법
+<ol>
+  <li>D(판별기)수를 많이 늘리고 이들의 평균을 이용한다
+    문제점 : 가뜩이나 메모리를 많이 사용하고 있는데 더 많은 메모리가 필요해진다</li>
+  <li>replay Buffer이용
+    이전에 생성한 G의 사진을 주기적으로 D에게 다시 전달하다 -> 이전 G의 행동가지 반영해 훈련이 가능하다</li>
+  
+domain adapation문제 : 정확도가 높지 않는 문제가 존재할 수 있다
+
+
