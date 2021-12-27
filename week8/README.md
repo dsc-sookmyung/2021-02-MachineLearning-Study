@@ -47,3 +47,8 @@ https://www.tensorflow.org/tutorials/generative/cyclegan
 판별자 D_X는 이미지 X와 생성된 이미지 X를 구별하는 방법 학습  
 판별자 D_Y는 이미지 Y와 생성된 이미지 Y를 구별하는 방법 학습  
   
+![화면 캡처 2021-12-28 002546](https://user-images.githubusercontent.com/66189747/147485583-da251f09-3a7c-41b6-9543-1c10cc31e42f.png)
+![화면 캡처 2021-12-28 002609](https://user-images.githubusercontent.com/66189747/147485589-1c492df8-7368-492b-9efc-84ed0ae5b485.png)
+![화면 캡처 2021-12-28 002634](https://user-images.githubusercontent.com/66189747/147485592-5c28e1ad-7a12-4a82-88e1-7986fa9a081b.png)
+![화면 캡처 2021-12-28 002648](https://user-images.githubusercontent.com/66189747/147485596-e4a944cc-9fa3-469b-ab64-46b7a3ec9fec.png)
+
