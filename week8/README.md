@@ -34,3 +34,16 @@ https://www.tensorflow.org/tutorials/generative/cyclegan
   
 ![수정한 말 이미지](https://user-images.githubusercontent.com/66189747/147481281-ebb1c697-853e-4a36-9ae8-49f6c7fa39c5.png)
 ![수정한 얼룩말 이미지](https://user-images.githubusercontent.com/66189747/147481292-69689a02-5216-49a5-84e5-9cd78f4d78cc.png)
+
+## Pix2Pix 모델 가져오기
+설치된 tensorflow_examples 패키지를 통해 Pix2Pix에서 사용되는 생성기와 판별자를 가져온다.  
+이 튜토리얼에서 사용된 모델 아키텍처는 Pix2Pix에서 사용된 것과 매우 유사하다.  
+### Pix2Pix와 CycleGan의 차이점  
+<ol><li>CycleGan은 배치정규화 대신 인스턴스 정규화를 사용한다</li>
+<li>논문에서는 수정된 resnet기반 생성기 이용, 여기서는 단순화를 위해 수정된 unet 생성기를 이용한다</li>  
+### 2개의 생성기 및 2개의 판별자 훈련  
+생성기 G는 이미지 X를 Y로 변환하는 방법 학습  
+생성기 F는 이미지 Y를 X로 변환하는 방법 학습  
+판별자 D_X는 이미지 X와 생성된 이미지 X를 구별하는 방법 학습  
+판별자 D_Y는 이미지 Y와 생성된 이미지 Y를 구별하는 방법 학습  
+  
