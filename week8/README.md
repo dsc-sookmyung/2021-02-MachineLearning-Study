@@ -20,4 +20,17 @@ https://www.tensorflow.org/tutorials/generative/cyclegan
 무작위 지터링 : 이미지 286x286크기로 조정후 256x256으로 무작위로 자름  
 무작위 미러링 : 이미지 좌우로 무작위로 뒤집힘  
   
-![이미지 가져온다](https://user-images.githubusercontent.com/66189747/147480738-0cf8198f-d204-42dd-83c1-cea6dd9a5972.png)  
+![이미지 가져온다](https://user-images.githubusercontent.com/66189747/147480738-0cf8198f-d204-42dd-83c1-cea6dd9a5972.png)   
+이미지 가져온 후 BUFFER_SIZE와 BATCH_SIZE, IMG_WIDTH, IMG_HIGHT를 설정한다  
+  
+![변수 설정](https://user-images.githubusercontent.com/66189747/147481022-2b699e1a-ef58-4083-9dce-820c3fa1e970.png)  
+  
+함수 만들고 이미지들 랜덤하게 수정한다  
+  
+![함수 선언](https://user-images.githubusercontent.com/66189747/147481188-300e6b7b-a2d5-4b5c-b924-8507eb2c3834.png)
+![함수 선언 및 이미지 수정](https://user-images.githubusercontent.com/66189747/147481196-aee4b43a-40f8-4219-b9ed-b9ce92cc9596.png)
+  
+수정한 이미지 확인하기
+  
+![수정한 말 이미지](https://user-images.githubusercontent.com/66189747/147481281-ebb1c697-853e-4a36-9ae8-49f6c7fa39c5.png)
+![수정한 얼룩말 이미지](https://user-images.githubusercontent.com/66189747/147481292-69689a02-5216-49a5-84e5-9cd78f4d78cc.png)
