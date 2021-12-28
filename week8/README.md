@@ -47,8 +47,36 @@ https://www.tensorflow.org/tutorials/generative/cyclegan
 판별자 D_X는 이미지 X와 생성된 이미지 X를 구별하는 방법 학습  
 판별자 D_Y는 이미지 Y와 생성된 이미지 Y를 구별하는 방법 학습  
   
-![화면 캡처 2021-12-28 002546](https://user-images.githubusercontent.com/66189747/147485583-da251f09-3a7c-41b6-9543-1c10cc31e42f.png)
-![화면 캡처 2021-12-28 002609](https://user-images.githubusercontent.com/66189747/147485589-1c492df8-7368-492b-9efc-84ed0ae5b485.png)
-![화면 캡처 2021-12-28 002634](https://user-images.githubusercontent.com/66189747/147485592-5c28e1ad-7a12-4a82-88e1-7986fa9a081b.png)
-![화면 캡처 2021-12-28 002648](https://user-images.githubusercontent.com/66189747/147485596-e4a944cc-9fa3-469b-ab64-46b7a3ec9fec.png)
+![Pix2Pix의 generator_g, f, discriminator_x, y가져오기](https://user-images.githubusercontent.com/66189747/147485583-da251f09-3a7c-41b6-9543-1c10cc31e42f.png)
+![generator, discriminator훈련](https://user-images.githubusercontent.com/66189747/147485589-1c492df8-7368-492b-9efc-84ed0ae5b485.png)
+![generator, discriminator훈련 결과](https://user-images.githubusercontent.com/66189747/147485592-5c28e1ad-7a12-4a82-88e1-7986fa9a081b.png)
+![generator, discriminator훈련, 결과](https://user-images.githubusercontent.com/66189747/147485596-e4a944cc-9fa3-469b-ab64-46b7a3ec9fec.png)
+  
+## 손실함수
+CycleGan에는 훈련할 쌍으로 연결된 데이터가 없어 훈련 중에 입력 x와 대상 y의 쌍이 언제나 의미가 있다고 할 수 없다  
+네트워크가 올바른 매핑을 학습하도록 강제하기 위해 **주기일관성손실**을 제안    
+판별자 손실 및 생성기 손실은 pix2pix에서 사용된 것과 유사하다  
+  
+### 주기일관성  
+결과가 원래 입력에 가까워야 함을 의미한다  
+ex)문장을 영어에서 프랑스어로 번역한 다음 다시 프랑스어에서 영어로 번역하면 결과 문장과 원래 문장이 같아야한다  
+X-G생성기->Y->F생성기->X  
+처음 x와 마지막 X사이에 평균절대오차가 계산된다  
+![loss 관련 함수 선언](https://user-images.githubusercontent.com/66189747/147533008-0de89806-48f4-4637-99dc-26125c5aa357.png)  
+![loss 관련 함수 선언 및 생성기와 판별자의 옵티마이저 초기화, 체크포인트 생성](https://user-images.githubusercontent.com/66189747/147533014-cda9df75-0e1b-45c5-9313-12b9b6e7e032.png)  
+  
+## 훈련하기
+이번 예제에서는 논문과 달리 훈련 시간을 줄이기 위해 40epoch를 대상으로 훈련한다  
+-> 그렇기 때문에 예측 정확성 떨어질 수 있다  
+![EPOCHS선언 및 이미지 생성 함수 선언](https://user-images.githubusercontent.com/66189747/147533217-13ea17b5-ae70-444d-bc11-7686a46dcf42.png)  
+훈련루프 네가지 기본 단계
+<ol><li>예측</li>
+<li>손실을 계산</li>
+<li>역전파를 사용하여 그래디언트를 계산</li>
+<li>그래디언트를 옵티마이저에 적용</li></ol>  
+![생성자 G와 X훈련 함수 생성](https://user-images.githubusercontent.com/66189747/147533347-8ee6c446-c624-4dce-b8a5-3ea2f770d0dd.png)
+![생성자 G와 X훈련 함수 생성](https://user-images.githubusercontent.com/66189747/147533350-8d2543bd-8678-4151-a253-e5770d245350.png)
+![훈련](https://user-images.githubusercontent.com/66189747/147533422-12c95bb5-18c0-48c9-a33a-deff927e9ad5.png)
+![실행화면 / 런타임 관련 문제로 훈련을 완료하지 못함](https://user-images.githubusercontent.com/66189747/147533466-a092881c-8da6-431d-8eba-639eaa0d8e7b.png)
+![이미지 생성하기(최종)](https://user-images.githubusercontent.com/66189747/147533542-c039d91e-f933-4b34-b2b0-48dd9a5951b0.png)
 
