@@ -74,9 +74,10 @@ X-G생성기->Y->F생성기->X
 <li>손실을 계산</li>
 <li>역전파를 사용하여 그래디언트를 계산</li>
 <li>그래디언트를 옵티마이저에 적용</li></ol>  
-![생성자 G와 X훈련 함수 생성](https://user-images.githubusercontent.com/66189747/147533347-8ee6c446-c624-4dce-b8a5-3ea2f770d0dd.png)
-![생성자 G와 X훈련 함수 생성](https://user-images.githubusercontent.com/66189747/147533350-8d2543bd-8678-4151-a253-e5770d245350.png)
-![훈련](https://user-images.githubusercontent.com/66189747/147533422-12c95bb5-18c0-48c9-a33a-deff927e9ad5.png)
-![실행화면 / 런타임 관련 문제로 훈련을 완료하지 못함](https://user-images.githubusercontent.com/66189747/147533466-a092881c-8da6-431d-8eba-639eaa0d8e7b.png)
-![이미지 생성하기(최종)](https://user-images.githubusercontent.com/66189747/147533542-c039d91e-f933-4b34-b2b0-48dd9a5951b0.png)
+    
+![생성자 G와 X훈련 함수 생성](https://user-images.githubusercontent.com/66189747/147533347-8ee6c446-c624-4dce-b8a5-3ea2f770d0dd.png)  
+![생성자 G와 X훈련 함수 생성](https://user-images.githubusercontent.com/66189747/147533350-8d2543bd-8678-4151-a253-e5770d245350.png)  
+![훈련](https://user-images.githubusercontent.com/66189747/147533422-12c95bb5-18c0-48c9-a33a-deff927e9ad5.png)  
+![실행화면 / 런타임 관련 문제로 훈련을 완료하지 못함](https://user-images.githubusercontent.com/66189747/147533466-a092881c-8da6-431d-8eba-639eaa0d8e7b.png)  
+![이미지 생성하기(최종)](https://user-images.githubusercontent.com/66189747/147533542-c039d91e-f933-4b34-b2b0-48dd9a5951b0.png)  
 
