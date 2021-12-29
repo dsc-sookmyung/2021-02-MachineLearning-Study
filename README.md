@@ -50,7 +50,7 @@
 | 5주차 | 장수민 | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
 | 6주차 | 조유림 | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
 | 7주차 | 금나연 | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
-| 8주차 | 양현서 | <ul><li>- [ ] </li></ul> | <ul><li>- [ ] </li></ul> |
+| 8주차 | 양현서 | <ul><li>- [x] </li></ul> | <ul><li>- [x] </li></ul> |
 <br/>
 </br>
 
